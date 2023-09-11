@@ -8,3 +8,4 @@ RUN apt-get update && apt-get install -y --no-install-recommends gcc-multilib cl
 RUN sdkmanager --install "ndk;25.2.9519653" 
 RUN mkdir -p ~/.gradle && echo 'ANDROID_NDK=/opt/android-sdk-linux/ndk/25.2.9519653' >> ~/.gradle/gradle.properties
 RUN sdkmanager --install "build-tools;30.0.3" "platforms;android-32" "platforms;android-31" "platforms;android-30"
+RUN rustup default stable
